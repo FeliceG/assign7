@@ -1,0 +1,12 @@
+<div *ngIf="researcher">
+  <h3>Researcher Details:</h3>
+  <div class="researcherdetail">
+    <ul>
+      <li>First:  {{ researcher.first }}</li>
+      <li>Last:  {{ researcher.list }}</li>
+      <li>Address: {{ researcher.address }}</li>
+      <li>City: {{ researcher.city }}, State: {{ researcher.state }}</li>
+    </ul>
+    <a routerLink="/researchers">back to roster</a>
+  </div>
+</div>

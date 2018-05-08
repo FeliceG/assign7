@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+  <h2>App Student Information</h2>
+  <h3>Here are the students currently registered for this course: </h3>
+  <p><app-student *ngFor='let student of studentList'
+        [student]='student'>  </app-student></p>

@@ -1,0 +1,9 @@
+<div class="researcher">
+  <div class="researcher-header">
+    {{ researcher.name }}
+  </div>
+  <div class="researcher-actions">
+    <a routerLink="/researcher/{{ researcher.id }}">View Details</a>
+    <button name="edit" (click)="edit($event, researcher)">Edit</button>
+  </div>
+<div>
