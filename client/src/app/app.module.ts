@@ -12,8 +12,8 @@ import { ResearcherComponent } from './researcher/researcher.component';
 import { ResearcherdetailComponent } from './researcherdetail/researcherdetail.component';
 
 const routes: Routes = [
-   { path: '', redirectTo: '/roster', pathMatch: 'full'},
-   { path: 'roster', component: RosterComponent },
+   { path: '', redirectTo: '/researcher', pathMatch: 'full'},
+   { path: 'researcher', component: RosterComponent },
    { path: 'researcher/:id', component: ResearcherdetailComponent }
 ];
 

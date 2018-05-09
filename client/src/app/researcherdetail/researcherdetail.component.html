@@ -3,10 +3,32 @@
   <div class="researcherdetail">
     <ul>
       <li>First:  {{ researcher.first }}</li>
-      <li>Last:  {{ researcher.list }}</li>
+      <li>Last:  {{ researcher.last }}</li>
       <li>Address: {{ researcher.address }}</li>
-      <li>City: {{ researcher.city }}, State: {{ researcher.state }}</li>
+      <li>City: {{ researcher.city }}</li>
+      <li>State: {{ researcher.state }}</li>
     </ul>
-    <a routerLink="/researchers">back to roster</a>
+    <a routerLink="/researcher/">back to roster</a>
   </div>
+
+  <form #form="ngForm" (ngSubmit)="updateResearcher(form.value)">
+    <div class="form-group">
+      <label for="first">First</label>
+      <input #first name="first" class="form-control" [ngModel]="researcher.first">
+      <br>
+      <label for="last">Last</label>
+      <input #last name="last" class="form-control" [ngModel]="researcher.last">
+      <br>
+      <label for="address">Address</label>
+      <input #address name="address" class="form-control" [ngModel]="researcher.address">
+      <br>
+      <label for="city">City</label>
+      <input #city name="city" class="form-control" [ngModel]="researcher.city">
+      <br>
+      <label for="state">State</label>
+      <input #state name="state" class="form-control" [ngModel]="researcher.state">
+      <br>
+    </div>
+    <button type="submit">SAVE</button>
+  </form>
 </div>

@@ -37,16 +37,21 @@ researcherList = [
 ];
 
 constructor(private http:HttpClient) { }
+
   //basic list method
   listResearchers() {
-//    return this.researcherList;
-    console.log(this.apiurl + this.researcherList);
-    return this.http.get( this.apiurl + '/roster' + this.researcherList);
+    return this.http.get( this.apiurl + 'researcher');
+//      return this.researcherList;
   }
 
   //"getOne" method, returns item from the array with _id == id
     getResearcher(id){
-      return this.http.get( this.apiurl + '/researcher/' + id);
+      return this.http.get( this.apiurl + 'researcher/' + id);
+//      return this.researcherList.find((el)=> {return el._id == id});
   }
+
+updateResearcher(id, data){
+  return this.http.put(this.apiurl + 'researcher/' + id, data);
+}
 
 }

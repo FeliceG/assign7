@@ -1,9 +1,10 @@
 <div class="researcher">
   <div class="researcher-header">
-    {{ researcher.name }}
+    {{ researcher.first }}  {{ researcher.last }}
   </div>
   <div class="researcher-actions">
-    <a routerLink="/researcher/{{ researcher.id }}">View Details</a>
-    <button name="edit" (click)="edit($event, researcher)">Edit</button>
+    <a routerLink="/researcher/{{ researcher._id }}">View Details</a><br>
+    <button name="edit" (click)="edit($event, researcher)">Edit</button><br>
   </div>
+  <br>
 <div>
