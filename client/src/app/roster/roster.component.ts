@@ -10,14 +10,14 @@ import { ResearcherService } from '../researcher.service';
 export class RosterComponent implements OnInit {
    researcherList: any = [];
 
-   constructor(private researcherService: ResearcherService){ }
-
+ constructor(private researcherService: ResearcherService){ }
 
   ngOnInit() {
+    console.log('in roster ngOnInit');
     this.researcherService.listResearchers()
       .subscribe((researchers)=> {
         console.log('got researchers ', researchers);
         this.researcherList = researchers;
     });
-   }
+  }
 }

@@ -40,7 +40,8 @@ constructor(private http:HttpClient) { }
   //basic list method
   listResearchers() {
 //    return this.researcherList;
-    return this.http.get( this.apiurl + '/roster' + researcherList);
+    console.log(this.apiurl + this.researcherList);
+    return this.http.get( this.apiurl + '/roster' + this.researcherList);
   }
 
   //"getOne" method, returns item from the array with _id == id
