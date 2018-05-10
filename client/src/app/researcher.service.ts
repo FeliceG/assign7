@@ -6,35 +6,6 @@ import { environment } from '../environments/environment';
 export class ResearcherService {
   private apiurl = environment.apiurl;
 
-researcherList = [
-  {
-     _id: 1,
-     first: 'Felice',
-     last: 'Gardner',
-     address: '87 Blossomcrest Road',
-     city: 'Lexington',
-     state: 'MA',
-     registered: true
-  },
-  {
-      _id: 2,
-      first: 'Kira',
-      last: 'Gardner',
-      address: '87 Blossomcrest Road',
-      city: 'Lexington',
-      state: 'MA',
-      registered: true
-  },
-  {
-      _id: 3,
-      first: 'Bill',
-      last: 'Gardner',
-      address: '87 Blossomcrest Road',
-      city: 'Lexington',
-      state: 'MA',
-      registered: true
-  }
-];
 
 constructor(private http:HttpClient) { }
 
