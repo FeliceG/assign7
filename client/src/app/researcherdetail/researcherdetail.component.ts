@@ -37,7 +37,7 @@ export class ResearcherdetailComponent implements OnInit {
      this.researcher.city = obj.city;
      this.researcher.state = obj.state;
 
-     this.photoService.updateResearcher(this.researcher._id, this.researcher)
+     this.researcherService.updateResearcher(this.researcher._id, this.researcher)
        .subscribe((results)=> {
        location.reload();
        });

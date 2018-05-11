@@ -4,6 +4,7 @@ var router = express.Router();
 
 // List the students on the roster
 router.get('/', students.list);
+router.get('/students', students.list);
 
 // Create a student record
 router.post('/create', students.create);
