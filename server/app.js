@@ -4,6 +4,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var url = require('url');
+var cookieParser = require('cookie-parser');
 var students = require('./routes/students.js');
 var api = require('./routes/api.js');
 var logger = require('morgan');
@@ -34,7 +35,7 @@ app.use(cookieParser());
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/', express.static(path.join(__dirname, 'public')));
-app.use('/api', apiRouter);
+app.use('/api', api);
 
 app.use('/researcher*', (req, res, next) => {
   const directory = path.join(__dirname, '../client/dist');
