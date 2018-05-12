@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { RosterComponent } from './roster/roster.component';
 import { ResearcherComponent } from './researcher/researcher.component';
 import { ResearcherdetailComponent } from './researcherdetail/researcherdetail.component';
-import { NewresearcherComponent } from './newresearcher/newresearcher.component';
 
 const routes: Routes = [
    { path: '', redirectTo: '/researcher', pathMatch: 'full'},
@@ -23,8 +22,7 @@ const routes: Routes = [
     AppComponent,
     RosterComponent,
     ResearcherComponent,
-    ResearcherdetailComponent,
-    NewresearcherComponent
+    ResearcherdetailComponent
   ],
   imports: [
     BrowserModule,
